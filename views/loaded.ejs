@@ -7,9 +7,9 @@
 <body>
     <h1>Dados Carregados:</h1>
     <% posts.forEach(post => { %>
-        <article>
-            <h2><%= post.title %></h2>
-            <p><%= post.body %></p>
+        <article >
+            <h2><%= post.titulo %></h2>
+            <img src="<%= post.capa %>"></img>
         </article>
     <% }); %>
 </body>

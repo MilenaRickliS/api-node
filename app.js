@@ -2,7 +2,7 @@ const express = require('express');
 
 const axios = require('axios');
 // URL da API que queremos acessar
-const url = 'https://jsonplaceholder.typicode.com/todos/1';
+const url = 'https://sujeitoprogramador.com/rn-api/?api=posts';
 axios.get(url)
 .then(response => {
     // Tratamento bem-sucedido da resposta
@@ -25,9 +25,10 @@ res.render('index', {});
 
 app.post('/loadData', async (req, res) => {
     try {
-        const url = "https://jsonplaceholder.typicode.com/posts"; // Exemplo de URL da API
+        const url = "https://sujeitoprogramador.com/rn-api/?api=posts"; // Exemplo de URL da API
         const response = await axios.get(url);
         const posts = response.data;
+        console.log(posts)
         res.render('loaded', { posts });
     } catch (error) {
         console.error(error);
