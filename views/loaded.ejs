@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dados Carregados</title>
+</head>
+<body>
+    <h1>Dados Carregados:</h1>
+    <% posts.forEach(post => { %>
+        <article>
+            <h2><%= post.title %></h2>
+            <p><%= post.body %></p>
+        </article>
+    <% }); %>
+</body>
+</html>
